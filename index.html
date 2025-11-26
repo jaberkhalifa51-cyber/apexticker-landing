@@ -525,68 +525,30 @@
     <!-- Top Stocks Table -->
     <section class="stocks-section" id="stocks">
         <h2>Top Performing Stocks Today</h2>
-        <table class="stocks-table">
-            <thead>
-                <tr>
-                    <th>Symbol</th>
-                    <th>Company Name</th>
-                    <th>Price</th>
-                    <th>Change</th>
-                    <th>% Change</th>
-                    <th>Volume</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="symbol">AAPL</td>
-                    <td>Apple Inc.</td>
-                    <td>$189.95</td>
-                    <td class="up">+2.45</td>
-                    <td class="up">+1.31%</td>
-                    <td>52.3M</td>
-                </tr>
-                <tr>
-                    <td class="symbol">GOOGL</td>
-                    <td>Alphabet Inc.</td>
-                    <td>$142.58</td>
-                    <td class="up">+1.78</td>
-                    <td class="up">+1.27%</td>
-                    <td>28.1M</td>
-                </tr>
-                <tr>
-                    <td class="symbol">MSFT</td>
-                    <td>Microsoft Corp.</td>
-                    <td>$378.91</td>
-                    <td class="up">+3.25</td>
-                    <td class="up">+0.87%</td>
-                    <td>19.5M</td>
-                </tr>
-                <tr>
-                    <td class="symbol">AMZN</td>
-                    <td>Amazon.com Inc.</td>
-                    <td>$195.42</td>
-                    <td class="down">-1.23</td>
-                    <td class="down">-0.63%</td>
-                    <td>42.7M</td>
-                </tr>
-                <tr>
-                    <td class="symbol">TSLA</td>
-                    <td>Tesla Inc.</td>
-                    <td>$248.50</td>
-                    <td class="up">+5.80</td>
-                    <td class="up">+2.39%</td>
-                    <td>135.2M</td>
-                </tr>
-                <tr>
-                    <td class="symbol">NVDA</td>
-                    <td>NVIDIA Corp.</td>
-                    <td>$875.43</td>
-                    <td class="up">+12.50</td>
-                    <td class="up">+1.45%</td>
-                    <td>31.8M</td>
-                </tr>
-            </tbody>
-        </table>
+       <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_ticker"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
+  {
+    "symbols": [
+      { "proName": "FOREXCOM:XAUUSD", "title": "Gold" },
+      { "proName": "NASDAQ:AAPL", "title": "Apple" },
+      { "proName": "NASDAQ:GOOGL", "title": "Google" },
+      { "proName": "ADX:APEX", "title": "Apex Investment" },
+      { "proName": "NASDAQ:APXT", "title": "Apex Technology" },
+      { "proName": "FX:EURUSD", "title": "EUR/USD" },
+      { "proName": "NYSE:BLK", "title": "BlackRock" },
+      { "proName": "NYSE:GS", "title": "Goldman Sachs" }
+    ],
+    "colorTheme": "light",
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "locale": "en"
+  }
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
     </section>
 
     <!-- Contact Section -->
