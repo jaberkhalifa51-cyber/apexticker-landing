@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Title and Meta Description -->
+    <title>مدونة ApexTicker - مقالات عن تتبع الأسهم والبورصة</title>
+    <meta name="description" content="اقرأ مقالات مفيدة عن تتبع الأسهم، استراتيجيات التداول، وتحليل بيانات البورصة الحية على مدونة ApexTicker">
+    <meta name="keywords" content="مدونة، أسهم، بورصة، تداول، استراتيجيات، تحليل، بيانات حية">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="مدونة ApexTicker - مقالات عن تتبع الأسهم">
+    <meta property="og:description" content="اقرأ أحدث المقالات عن تتبع الأسهم والبورصة">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.apexticker.com/blog.html">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="مدونة ApexTicker">
+    <meta name="twitter:description" content="مقالات متخصصة عن الأسهم والبورصة">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.apexticker.com/blog.html">
+    
+    <!-- Meta Author and Copyright -->
+    <meta name="author" content="ApexTicker">
+    <meta name="copyright" content="Copyright © 2025 ApexTicker. جميع الحقوق محفوظة.">
+    
+    <!-- Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "مدونة ApexTicker",
+      "description": "مدونة متخصصة في تتبع الأسهم والبورصة",
+      "url": "https://www.apexticker.com/blog.html",
+      "author": {
+        "@type": "Organization",
+        "name": "ApexTicker",
+        "url": "https://www.apexticker.com"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(30, 60, 114, 0.95);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #00bcd4;
+        }
+        
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        header a:hover {
+            color: #00bcd4;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .blog-card-header {
+            background: linear-gradient(135deg, #00bcd4 0%, #0288d1 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .blog-card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .blog-card-date {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .blog-card-content {
+            padding: 20px;
+        }
+        
+        .blog-card-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            min-height: 100px;
+        }
+        
+        .blog-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .read-time {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .read-btn {
+            background: linear-gradient(135deg, #00bcd4 0%, #0288d1 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .read-btn:hover {
+            opacity: 0.9;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            background: white;
+            color: #1e3c72;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .back-btn:hover {
+            background: #00bcd4;
+            color: white;
+        }
+        
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 3px solid #00bcd4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">ApexTicker</a>
+            <a href="/blog.html">المدونة</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <a href="/" class="back-btn">← العودة إلى الرئيسية</a>
+        
+        <h1>مدونة ApexTicker 📰</h1>
+        <p style="text-align: center; color: white; font-size: 18px; margin-bottom: 40px;">مقالات متخصصة عن تتبع الأسهم والبورصة والاستراتيجيات الفعّالة</p>
+        
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <div class="blog-card-title">كيفية تتبع الأسهم بفعالية</div>
+                    <div class="blog-card-date">📅 2025-01-15</div>
+                </div>
+                <div class="blog-card-content">
+                    <p class="blog-card-description">
+                        اكتشف أفضل الطرق والأدوات لتتبع أسهمك بشكل فعّال. في هذا المقال، نشرح كيفية استخدام المؤشرات الفنية والبيانات الحية لاتخاذ قرارات استثمارية ذكية.
+                    </p>
+                    <div class="blog-card-footer">
+                        <span class="read-time">⏱ وقت القراءة: 8 دقائق</span>
+                        <a href="/blog-1-tracking-stocks.html" class="read-btn">اقرأ المقال</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 2 -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <div class="blog-card-title">أفضل استراتيجيات التداول</div>
+                    <div class="blog-card-date">📅 2025-01-12</div>
+                </div>
+                <div class="blog-card-content">
+                    <p class="blog-card-description">
+                        تعرف على أفضل استراتيجيات التداول المثبتة والتي تساعدك على تحقيق أرباح مستدامة. نناقش استراتيجيات محافظة وموجهة للنمو.
+                    </p>
+                    <div class="blog-card-footer">
+                        <span class="read-time">⏱ وقت القراءة: 10 دقائق</span>
+                        <a href="/blog-2-trading-strategies.html" class="read-btn">اقرأ المقال</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 3 -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <div class="blog-card-title">شرح بيانات البورصة</div>
+                    <div class="blog-card-date">📅 2025-01-10</div>
+                </div>
+                <div class="blog-card-content">
+                    <p class="blog-card-description">
+                        دليل شامل لفهم بيانات البورصة والمؤشرات الرئيسية. تعلم كيفية قراءة الرسوم البيانية وتحليل اتجاهات السوق بكل سهولة.
+                    </p>
+                    <div class="blog-card-footer">
+                        <span class="read-time">⏱ وقت القراءة: 9 دقائق</span>
+                        <a href="/blog-3-market-data.html" class="read-btn">اقرأ المقال</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        © 2025 ApexTicker. جميع الحقوق محفوظة. | منصة متخصصة في تتبع الأسهم والبورصة الحية
+    </footer>
+</body>
+</html>
