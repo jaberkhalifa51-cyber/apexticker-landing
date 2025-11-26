@@ -456,6 +456,35 @@
         <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/f004e558-72ad-43e0-8db8-33201246687e" alt="ApexTicker Stock Exchange Trading Floor" style="max-height: 500px; object-fit: cover;">
     </section>
 
+    <!-- Top Stocks Table -->
+    <section class="stocks-section" id="stocks">
+        <h2>Top Performing Stocks Today</h2>
+       <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_ticker"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
+  {
+    "symbols": [
+      { "proName": "FOREXCOM:XAUUSD", "title": "Gold" },
+      { "proName": "NASDAQ:AAPL", "title": "Apple" },
+      { "proName": "NASDAQ:GOOGL", "title": "Google" },
+      { "proName": "ADX:APEX", "title": "Apex Investment" },
+      { "proName": "NASDAQ:APXT", "title": "Apex Technology" },
+      { "proName": "FX:EURUSD", "title": "EUR/USD" },
+      { "proName": "NYSE:BLK", "title": "BlackRock" },
+      { "proName": "NYSE:GS", "title": "Goldman Sachs" }
+    ],
+    "colorTheme": "light",
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "locale": "en"
+  }
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+ </section>
+    
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -520,35 +549,6 @@
                 <p>Access stocks from NYSE, NASDAQ, LSE, and more. Trade globally, anytime, anywhere.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Top Stocks Table -->
-    <section class="stocks-section" id="stocks">
-        <h2>Top Performing Stocks Today</h2>
-       <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_ticker"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
-  {
-    "symbols": [
-      { "proName": "FOREXCOM:XAUUSD", "title": "Gold" },
-      { "proName": "NASDAQ:AAPL", "title": "Apple" },
-      { "proName": "NASDAQ:GOOGL", "title": "Google" },
-      { "proName": "ADX:APEX", "title": "Apex Investment" },
-      { "proName": "NASDAQ:APXT", "title": "Apex Technology" },
-      { "proName": "FX:EURUSD", "title": "EUR/USD" },
-      { "proName": "NYSE:BLK", "title": "BlackRock" },
-      { "proName": "NYSE:GS", "title": "Goldman Sachs" }
-    ],
-    "colorTheme": "light",
-    "isTransparent": false,
-    "displayMode": "adaptive",
-    "locale": "en"
-  }
-  </script>
-</div>
-<!-- TradingView Widget END -->
-
     </section>
 
     <!-- Contact Section -->
