@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar - ApexTicker</title>
+    <!-- نفس ملف الاستايل بتاعك عشان الهيدر والفوتر يبقوا زي بعض -->
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* تنسيق بسيط عشان التقويم يكون في النص وشكله حلو */
+        .calendar-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        iframe {
+            width: 100% !important; /* عشان يملأ الشاشة في الموبايل */
+            height: 600px !important; /* طول مناسب */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- هنا المفروض تحط نفس الهيدر (القائمة) الموجود في صفحتك الرئيسية -->
+    <nav>
+        <!-- (انسخ الهيدر من index.html وحطه هنا) -->
+    </nav>
+
+    <div class="calendar-container">
+        <h1>📅 Daily Economic Calendar</h1>
+        
+        <!-- الكود بتاعك اهو 👇 -->
+        <iframe src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&features=datepicker,timezone&countries=25,32,6,37,72,22,17,39,14,10,35,43,56,36,110,11,26,12,4,5&calType=week&timeZone=8&lang=1" width="100%" height="600" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
+        
+        <div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif; margin-top: 10px;">
+            <span style="font-size: 11px;color: #333333;text-decoration: none;">Real Time Economic Calendar provided by <a href="https://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a>.</span>
+        </div>
+    </div>
+
+    <!-- هنا حط نفس الفوتر الموجود في صفحتك الرئيسية -->
+    <footer>
+        <!-- (انسخ الفوتر من index.html وحطه هنا) -->
+    </footer>
+
+</body>
+</html>
