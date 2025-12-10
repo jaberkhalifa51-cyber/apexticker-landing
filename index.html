@@ -593,6 +593,89 @@
     loadMarketData();
 </script>
 
+    <!-- قسم التحليل الفني المباشر -->
+<section style="padding: 40px 20px; background-color: #111;">
+    <h2 style="text-align: center; color: #fff; font-family: sans-serif; margin-bottom: 30px;">Market Technical Analysis Dashboard</h2>
+    
+    <!-- حاوية العدادات بتقنية الشبكة (Grid) -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1400px; margin: 0 auto;">
+
+        <!-- 1. Gold (XAUUSD) -->
+        <div class="tradingview-widget-container" style="height: 400px; width: 100%;">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+            {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "OANDA:XAUUSD",
+                "showIntervalTabs": true,
+                "displayMode": "single",
+                "locale": "en",
+                "colorTheme": "dark"
+            }
+            </script>
+        </div>
+
+        <!-- 2. Bitcoin (BTCUSD) -->
+        <div class="tradingview-widget-container" style="height: 400px; width: 100%;">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+            {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "BINANCE:BTCUSDT",
+                "showIntervalTabs": true,
+                "displayMode": "single",
+                "locale": "en",
+                "colorTheme": "dark"
+            }
+            </script>
+        </div>
+
+        <!-- 3. Apple (AAPL) -->
+        <div class="tradingview-widget-container" style="height: 400px; width: 100%;">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+            {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "NASDAQ:AAPL",
+                "showIntervalTabs": true,
+                "displayMode": "single",
+                "locale": "en",
+                "colorTheme": "dark"
+            }
+            </script>
+        </div>
+
+         <!-- 4. Euro/Dollar (EURUSD) -->
+        <div class="tradingview-widget-container" style="height: 400px; width: 100%;">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+            {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "FX:EURUSD",
+                "showIntervalTabs": true,
+                "displayMode": "single",
+                "locale": "en",
+                "colorTheme": "dark"
+            }
+            </script>
+        </div>
+
+    </div>
+</section>
+
+
 <!-- بداية قسم التقويم الاقتصادي (Dark Mode Compatible) -->
 <div style="text-align: center; margin: 40px 0; padding: 20px; background: transparent;">
     
