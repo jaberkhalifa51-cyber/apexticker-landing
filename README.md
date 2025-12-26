@@ -1,17 +1,17 @@
-# 📈 ApexTicker - Real-Time Stock Market Tracker
+# 📈 Apex Ticker - Real-Time Stock Market Tracker
 
 > **Free. Fast. No Clutter. Just Your Daily Top Gainers.**
 
-[![Visit ApexTicker](https://img.shields.io/badge/Visit-ApexTicker.com-brightgreen?style=for-the-badge)](https://www.apexticker.com)
+[![Visit Apex Ticker](https://img.shields.io/badge/Visit-ApexTicker.com-brightgreen?style=for-the-badge)](https://www.apexticker.com)
 [![Product Hunt](https://img.shields.io/badge/ProductHunt-Launch-orange?style=for-the-badge)](https://www.producthunt.com/posts/apexticker)
 [![SaaSHub](https://img.shields.io/badge/SaaSHub-Verified-2ea44f?style=for-the-badge&logo=saashub)](https://www.saashub.com/apexticker)
 [![GitHub](https://img.shields.io/badge/GitHub-ApexTicker--Public-black?style=for-the-badge)](https://github.com/jaberkhalifa51-cyber/ApexTicker-Public)
 
 ---
 
-## ✨ What is ApexTicker?
+## ✨ What is Apex Ticker?
 
-ApexTicker is a **free, real-time stock market tracker** that shows you the **top 5 performing stocks of the day** without requiring login, subscriptions, or dealing with annoying ads. It's built for speed and simplicity.
+Apex Ticker is a **free, real-time stock market tracker** that shows you the **top 5 performing stocks of the day** without requiring login, subscriptions, or dealing with annoying ads. It's built for speed and simplicity.
 
 **Perfect for:**
 - 📈 Day traders
