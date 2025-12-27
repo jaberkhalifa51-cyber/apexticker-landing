@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://apexticker.com/sitemap.xml
 Sitemap: https://www.apexticker.com/sitemap.xml
