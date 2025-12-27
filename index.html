@@ -547,13 +547,13 @@ onmouseout="this.style.background='rgba(59, 130, 246, 0.15)'; this.style.boxShad
 <!-- TradingView Widget END -->
 </section>
 
-  <!-- Ultimate Time Machine Tool (English Version) -->
+ <!-- Ultimate Time Machine Tool (Hybrid System with Status Monitor) -->
 <section id="time-machine-ultimate" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); padding: 80px 20px; text-align: center; border-top: 1px solid #334155; position: relative; overflow: hidden; min-height: 800px;">
     
-    <!-- Animated Grid Background -->
+    <!-- Background Grid -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#1e293b 1px, transparent 1px); background-size: 30px 30px; opacity: 0.3; pointer-events: none;"></div>
 
-    <!-- Scripts -->
+    <!-- Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
@@ -561,34 +561,30 @@ onmouseout="this.style.background='rgba(59, 130, 246, 0.15)'; this.style.boxShad
         
         <!-- Header -->
         <div style="margin-bottom: 50px;">
-            <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(16, 185, 129, 0.3); font-weight: bold;">FREE TOOL</span>
-            <h2 style="color: #ffffff; font-size: 3.5rem; margin: 15px 0; font-weight: 800; text-shadow: 0 0 40px rgba(56, 189, 248, 0.4);">Time Travel <span style="color: #38bdf8;">Investing</span></h2>
-            <p style="color: #94a3b8; font-size: 1.2rem;">See how much wealth you missed. Don't miss the next one.</p>
+            <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(16, 185, 129, 0.3); font-weight: bold;">FREE TOOL</span>
+                <!-- Status Dot for Admin Monitoring -->
+                <span id="api-status" style="height: 12px; width: 12px; background-color: #64748b; border-radius: 50%; display: inline-block; cursor: help;" title="System Status: Ready"></span>
+            </div>
+            
+            <h2 style="color: #ffffff; font-size: 3.5rem; margin: 0; font-weight: 800; text-shadow: 0 0 40px rgba(56, 189, 248, 0.4);">Time Travel <span style="color: #38bdf8;">Investing</span></h2>
+            <p style="color: #94a3b8; font-size: 1.2rem; margin-top: 15px;">Calculate your missed wealth with real historical market data.</p>
         </div>
 
-        <!-- Main Tool Container -->
+        <!-- Main Container -->
         <div style="background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(15px); border-radius: 25px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 25px 80px -20px rgba(0,0,0,0.7); overflow: hidden; display: flex; flex-wrap: wrap;">
             
-            <!-- Left Side: Controls -->
+            <!-- Controls (Left) -->
             <div style="flex: 1; min-width: 320px; padding: 40px; border-right: 1px solid rgba(255,255,255,0.05);">
-                
-                <!-- 1. Asset Selection -->
                 <div style="margin-bottom: 25px; text-align: left;">
                     <label style="color: #cbd5e1; display: block; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem;">Select Asset (Stock, Crypto, Gold)</label>
                     <div style="position: relative;">
-                        <input type="text" id="asset-search" placeholder="e.g. BTC, NVDA, XAU (Gold)..." 
-                            style="width: 100%; padding: 15px; background: #0f172a; border: 1px solid #334155; border-radius: 12px; color: #fff; font-size: 1.1rem; outline: none; transition: 0.3s;">
+                        <input type="text" id="asset-search" placeholder="e.g. BTC, NVDA, AAPL..." 
+                            style="width: 100%; padding: 15px; background: #0f172a; border: 1px solid #334155; border-radius: 12px; color: #fff; font-size: 1.1rem; outline: none; transition: 0.3s; text-transform: uppercase;">
                         <div style="position: absolute; right: 15px; top: 15px; color: #64748b;">🔍</div>
-                    </div>
-                    <!-- Quick Suggestions -->
-                    <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
-                        <span onclick="setAsset('BTC')" style="cursor: pointer; background: rgba(247, 147, 26, 0.1); color: #f7931a; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; border: 1px solid rgba(247, 147, 26, 0.2);">Bitcoin</span>
-                        <span onclick="setAsset('XAU')" style="cursor: pointer; background: rgba(251, 191, 36, 0.1); color: #fbbf24; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; border: 1px solid rgba(251, 191, 36, 0.2);">Gold</span>
-                        <span onclick="setAsset('NVDA')" style="cursor: pointer; background: rgba(118, 185, 0, 0.1); color: #76b900; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; border: 1px solid rgba(118, 185, 0, 0.2);">Nvidia</span>
                     </div>
                 </div>
 
-                <!-- 2. Investment Amount -->
                 <div style="margin-bottom: 25px; text-align: left;">
                     <label style="color: #cbd5e1; display: block; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem;">Monthly Investment ($)</label>
                     <div style="display: flex; align-items: center; gap: 15px;">
@@ -597,29 +593,27 @@ onmouseout="this.style.background='rgba(59, 130, 246, 0.15)'; this.style.boxShad
                     </div>
                 </div>
 
-                <!-- 3. Duration (Free Input) -->
                 <div style="margin-bottom: 35px; text-align: left;">
                     <label style="color: #cbd5e1; display: block; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem;">Duration (Years)</label>
-                    <input type="number" id="duration-input" value="5" min="1" max="30" placeholder="Years" 
+                    <input type="number" id="duration-input" value="5" min="1" max="20" placeholder="Years" 
                         style="width: 100%; padding: 15px; background: #0f172a; border: 1px solid #334155; border-radius: 12px; color: #fff; font-size: 1.1rem;">
                 </div>
 
-                <button id="calc-btn" onclick="calculateROI()" style="width: 100%; padding: 18px; background: linear-gradient(90deg, #3b82f6, #2563eb); color: white; border: none; border-radius: 12px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4); text-transform: uppercase; letter-spacing: 1px;">
+                <button id="calc-btn" onclick="startCalculation()" style="width: 100%; padding: 18px; background: linear-gradient(90deg, #3b82f6, #2563eb); color: white; border: none; border-radius: 12px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4); text-transform: uppercase; letter-spacing: 1px;">
                     🚀 Calculate Returns
                 </button>
-
             </div>
 
-            <!-- Right Side: Visuals -->
+            <!-- Visuals (Right) -->
             <div style="flex: 1.5; min-width: 320px; padding: 40px; background: rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: center; position: relative;">
                 
-                <!-- Initial State -->
+                <!-- Initial View -->
                 <div id="start-view" style="text-align: center; color: #64748b;">
-                    <div style="font-size: 5rem; margin-bottom: 15px; filter: drop-shadow(0 0 20px rgba(56,189,248,0.2));">💸</div>
-                    <p style="font-size: 1.1rem;">Enter details and hit calculate to see the magic.</p>
+                    <div style="font-size: 5rem; margin-bottom: 15px;">💸</div>
+                    <p style="font-size: 1.1rem;">Enter asset details to fetch history.</p>
                 </div>
 
-                <!-- Result View -->
+                <!-- Results View -->
                 <div id="result-view" style="display: none; animation: fadeIn 0.5s ease-out;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">
                         <div>
@@ -639,7 +633,8 @@ onmouseout="this.style.background='rgba(59, 130, 246, 0.15)'; this.style.boxShad
                     <div style="margin-top: 25px; padding: 15px; background: rgba(59, 130, 246, 0.1); border-radius: 10px; border-left: 4px solid #3b82f6; text-align: left;">
                         <p style="margin: 0; color: #e2e8f0; font-size: 0.9rem; line-height: 1.5;">
                             💡 <b>Insight:</b> You missed a <span id="gain-percent" style="color:#fbbf24; font-weight:bold">0%</span> gain. 
-                            <a href="#" style="color: #38bdf8; text-decoration: none; font-weight: bold; border-bottom: 1px dashed #38bdf8;">Start investing today to catch the next wave.</a>
+                            <a href="#" style="color: #38bdf8; text-decoration: none; font-weight: bold;">Start today.</a>
+                            <br><span id="data-source-note" style="font-size: 0.75rem; color: #64748b; margin-top: 5px; display: block;"></span>
                         </p>
                     </div>
                 </div>
@@ -647,83 +642,155 @@ onmouseout="this.style.background='rgba(59, 130, 246, 0.15)'; this.style.boxShad
         </div>
     </div>
 
+    <!-- Logic Script -->
     <script>
-        // 1. Logic for Input Sync
         function updateInputs(val, source) {
             if (source === 'slider') document.getElementById('amount-input').value = val;
             else document.getElementById('amount-slider').value = val;
         }
 
-        function setAsset(symbol) {
-            document.getElementById('asset-search').value = symbol;
-        }
-
-        // 2. Calculation Logic
         let chartInstance = null;
 
-        function calculateROI() {
-            const asset = document.getElementById('asset-search').value.toUpperCase();
+        // --- Main Process Function ---
+        async function startCalculation() {
+            const btn = document.getElementById('calc-btn');
+            const statusDot = document.getElementById('api-status');
+            const originalText = btn.innerText;
+            
+            btn.innerText = "⏳ Connecting to Market...";
+            btn.disabled = true;
+            btn.style.opacity = "0.7";
+
+            const symbol = document.getElementById('asset-search').value.toUpperCase().trim();
             const monthly = parseFloat(document.getElementById('amount-input').value);
             const years = parseFloat(document.getElementById('duration-input').value);
 
-            if (!asset || !monthly || !years) {
-                alert("Please fill all fields!");
+            if (!symbol || !monthly || !years) {
+                alert("Please fill all fields.");
+                resetBtn(btn, originalText);
                 return;
             }
 
-            // --- Simulation Logic (Smart Approximation) ---
-            // In a real app, you would fetch API here. For speed & SEO, we use "Smart Logic":
-            // Crypto = High volatility, High return
-            // Gold = Low volatility, Steady return
-            // Tech Stocks = Medium volatility, High return
+            try {
+                // Try fetching Real Data first
+                const realData = await fetchRealData(symbol, years);
+                
+                if (realData && realData.length > 5) {
+                    // Success: Green Light 🟢
+                    document.getElementById('data-source-note').innerText = "* Data Source: Real Market History (Yahoo Finance)";
+                    statusDot.style.backgroundColor = "#10b981"; 
+                    statusDot.title = "Live Data: Active";
+                    processAndDraw(realData, monthly, symbol, true);
+                } else {
+                    throw new Error("Invalid Data");
+                }
+            } catch (e) {
+                // Fail: Switch to Simulation (Orange Light 🟠)
+                console.warn("API Error, switching to simulation:", e);
+                document.getElementById('data-source-note').innerText = "* Data Source: Historical Estimates (Simulation Mode)";
+                statusDot.style.backgroundColor = "#f59e0b"; 
+                statusDot.title = "Simulation Mode (API Issue)";
+                runSimulationMode(symbol, monthly, years);
+            }
+
+            resetBtn(btn, originalText);
+        }
+
+        function resetBtn(btn, text) {
+            btn.innerText = text;
+            btn.disabled = false;
+            btn.style.opacity = "1";
+        }
+
+        // --- Helper: Fetch Real Data from Yahoo via Proxy ---
+        async function fetchRealData(symbol, years) {
+            let querySymbol = symbol;
+            if (symbol === 'BTC') querySymbol = 'BTC-USD';
+            if (symbol === 'ETH') querySymbol = 'ETH-USD';
+            if (symbol === 'GOLD' || symbol === 'XAU') querySymbol = 'GC=F';
             
-            let annualRate = 0.08; // Default S&P 500
+            const endDate = Math.floor(Date.now() / 1000);
+            const startDate = endDate - (years * 365 * 24 * 60 * 60);
+            
+            // Using corsproxy.io for free access
+            const url = `https://corsproxy.io/?https://query1.finance.yahoo.com/v8/finance/chart/${querySymbol}?period1=${startDate}&period2=${endDate}&interval=1mo`;
+
+            const res = await fetch(url);
+            if (!res.ok) throw new Error("Network Error");
+            
+            const data = await res.json();
+            const result = data.chart.result[0];
+            
+            return result.timestamp.map((t, i) => ({
+                date: new Date(t * 1000),
+                price: result.indicators.quote[0].close[i]
+            })).filter(x => x.price);
+        }
+
+        // --- Logic A: Process Real Data ---
+        function processAndDraw(data, monthly, symbol, isReal) {
+            let totalInvested = 0;
+            let totalShares = 0;
+            let wealthArr = [], investedArr = [], labels = [];
+
+            data.forEach(point => {
+                const shares = monthly / point.price;
+                totalShares += shares;
+                totalInvested += monthly;
+                wealthArr.push(totalShares * point.price);
+                investedArr.push(totalInvested);
+                labels.push(point.date.toLocaleDateString('en-US', { month: 'short', year: '2-digit' }));
+            });
+
+            drawChart(labels, wealthArr, investedArr, symbol, isReal);
+        }
+
+        // --- Logic B: Simulation Mode (Fail-Safe) ---
+        function runSimulationMode(symbol, monthly, years) {
+            let growth = 0.10; // Default
             let volatility = 0.05;
 
-            if (['BTC', 'ETH', 'SOL', 'CRYPTO'].some(x => asset.includes(x))) { 
-                annualRate = 0.60; volatility = 0.20; // Crypto Rules
-            } else if (['NVDA', 'TSLA', 'AMD', 'META'].some(x => asset.includes(x))) {
-                annualRate = 0.35; volatility = 0.15; // High Growth Tech
-            } else if (['XAU', 'GOLD', 'SILVER', 'XAG'].some(x => asset.includes(x))) {
-                annualRate = 0.09; volatility = 0.03; // Commodities
-            }
+            if (['BTC', 'ETH', 'CRYPTO'].some(x => symbol.includes(x))) { growth = 0.45; volatility = 0.30; }
+            if (['NVDA', 'TSLA', 'TECH'].some(x => symbol.includes(x))) { growth = 0.25; volatility = 0.20; }
+            if (['GOLD', 'XAU'].some(x => symbol.includes(x))) { growth = 0.06; volatility = 0.04; }
 
-            // Generate Data Points
             let months = years * 12;
-            let labels = [];
-            let wealthData = [];
-            let investedData = [];
-            let currentWealth = 0;
-            let totalInvested = 0;
+            let wealth = 0, invested = 0;
+            let wealthArr = [], investedArr = [], labels = [];
 
             for (let i = 1; i <= months; i++) {
-                totalInvested += monthly;
-                // Compound Interest formula with random market noise
-                let monthlyRate = annualRate / 12;
+                invested += monthly;
                 let noise = (Math.random() - 0.5) * volatility;
+                wealth = (wealth + monthly) * (1 + (growth/12) + noise);
                 
-                currentWealth += monthly;
-                currentWealth *= (1 + monthlyRate + noise);
-
-                if (i % Math.ceil(months/12) === 0) { // Optimize points for chart
-                    labels.push(`Year ${Math.ceil(i/12)}`);
-                    wealthData.push(currentWealth);
-                    investedData.push(totalInvested);
+                if (months > 24) {
+                    if (i % 6 === 0) {
+                        wealthArr.push(wealth); investedArr.push(invested); labels.push(`Y${Math.ceil(i/12)}`);
+                    }
+                } else {
+                    wealthArr.push(wealth); investedArr.push(invested); labels.push(`M${i}`);
                 }
             }
+            drawChart(labels, wealthArr, investedArr, symbol, false);
+        }
 
-            // 3. Render View
+        // --- Common: Draw Chart ---
+        function drawChart(labels, wealthData, investedData, symbol, isReal) {
+            const finalWealth = wealthData[wealthData.length-1];
+            const finalInvested = investedData[investedData.length-1];
+            
             document.getElementById('start-view').style.display = 'none';
             document.getElementById('result-view').style.display = 'block';
             
-            // Animate Numbers
-            document.getElementById('invested-display').innerText = '$' + totalInvested.toLocaleString();
-            document.getElementById('wealth-display').innerText = '$' + Math.floor(currentWealth).toLocaleString();
+            document.getElementById('invested-display').innerText = '$' + Math.floor(finalInvested).toLocaleString();
+            document.getElementById('wealth-display').innerText = '$' + Math.floor(finalWealth).toLocaleString();
             
-            let gain = ((currentWealth - totalInvested) / totalInvested) * 100;
-            document.getElementById('gain-percent').innerText = '+' + gain.toFixed(0) + '%';
+            let gain = ((finalWealth - finalInvested) / finalInvested) * 100;
+            let color = gain > 0 ? '#10b981' : '#ef4444';
+            
+            document.getElementById('gain-percent').innerText = (gain>0?'+':'') + gain.toFixed(2) + '%';
+            document.getElementById('gain-percent').style.color = color;
 
-            // 4. Render Chart
             const ctx = document.getElementById('roiChart').getContext('2d');
             if (chartInstance) chartInstance.destroy();
 
@@ -731,57 +798,46 @@ onmouseout="this.style.background='rgba(59, 130, 246, 0.15)'; this.style.boxShad
                 type: 'line',
                 data: {
                     labels: labels,
-                    datasets: [
-                        {
-                            label: 'Your Wealth',
-                            data: wealthData,
-                            borderColor: '#10b981',
-                            backgroundColor: (context) => {
-                                const ctx = context.chart.ctx;
-                                const gradient = ctx.createLinearGradient(0, 0, 0, 300);
-                                gradient.addColorStop(0, 'rgba(16, 185, 129, 0.4)');
-                                gradient.addColorStop(1, 'rgba(16, 185, 129, 0.0)');
-                                return gradient;
-                            },
-                            fill: true,
-                            tension: 0.4,
-                            pointRadius: 0
+                    datasets: [{
+                        label: isReal ? `Actual History (${symbol})` : `Estimated Growth (${symbol})`,
+                        data: wealthData,
+                        borderColor: color,
+                        backgroundColor: (context) => {
+                            const ctx = context.chart.ctx;
+                            const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+                            gradient.addColorStop(0, gain > 0 ? 'rgba(16, 185, 129, 0.4)' : 'rgba(239, 68, 68, 0.4)');
+                            gradient.addColorStop(1, 'rgba(0,0,0,0)');
+                            return gradient;
                         },
-                        {
-                            label: 'Cash Invested',
-                            data: investedData,
-                            borderColor: '#64748b',
-                            borderDash: [5, 5],
-                            fill: false,
-                            tension: 0.4,
-                            pointRadius: 0
-                        }
-                    ]
+                        fill: true,
+                        pointRadius: 0,
+                        borderWidth: 2
+                    }, {
+                        label: 'Cash Invested',
+                        data: investedData,
+                        borderColor: '#64748b',
+                        borderDash: [5, 5],
+                        fill: false,
+                        pointRadius: 0
+                    }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { display: true, labels: { color: '#cbd5e1' } } },
                     scales: {
-                        x: { grid: { display: false }, ticks: { color: '#64748b' } },
-                        y: { grid: { color: '#334155' }, ticks: { color: '#64748b', callback: (v) => '$' + v/1000 + 'k' } }
+                        x: { grid: { display: false }, ticks: { color: '#64748b', maxTicksLimit: 8 } },
+                        y: { grid: { color: '#334155' }, ticks: { color: '#64748b' } }
                     },
-                    interaction: { mode: 'index', intersect: false }
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: { legend: { labels: { color: '#cbd5e1' } } }
                 }
             });
 
-            // 5. Celebration!
-            if (gain > 0) {
-                confetti({
-                    particleCount: 150,
-                    spread: 80,
-                    origin: { y: 0.6 },
-                    colors: ['#10b981', '#38bdf8', '#fbbf24']
-                });
-            }
+            if (gain > 0) confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 }, colors: ['#10b981', '#38bdf8'] });
         }
     </script>
 </section>
+
 
       <!-- Features -->
     <section class="features">
